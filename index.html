@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Portfolio - Nicolas Traczuk</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/card.css">
+        <link rel="stylesheet" href="styles/socialCard.css">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- tailwind -->
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <!-- sweet alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- aos Animate-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-linear-to-b from-blue-900 via-black to-cyan-900">
+        <header>
+            <nav class=" p-4">
+                <!-- Contenedor para el botón y el menú -->
+                <div class="flex items-center">
+                    <!-- Botón para mostrar/ocultar el menú en mobile -->
+                    <button id="menu-toggle" class="text-white block md:hidden focus:outline-none ml-auto">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            
+                <!-- Menú con transición -->
+                <ul id="menu" class="hidden md:flex justify-center gap-10 text-2xl text-white mt-4 md:mt-0 transition-all duration-300 ease-in-out opacity-0 md:opacity-100 translate-y-[-10px] md:translate-y-0">
+                    <li class="neon-text"><a href="#">Inicio</a></li>
+                    <li class="neon-text"><a href="#">Acerca de mi</a></li>
+                    <li class="neon-text"><a href="#">Portfolio</a></li>
+                    <li class="neon-text"><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            
+
+        </header>
+
+
+        <main>
+            <div class="container mx-auto p-4 mt-20">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 ">
+                    <!-- Imagen con backdrop difuminado -->
+                    <div class="relative group">
+                        <div class="absolute inset-0 backdrop-blur-md bg-black/30 rounded-full"></div>
+                        <img src="img/imagen-nicolas.png" class="relative rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-2 border-purple-500/50 shadow-lg shadow-purple-500/50 group-hover:border-purple-500 group-hover:shadow-purple-500 group-hover:scale-110 group-hover:z-10  transition-all duration-300" alt="Nicolas Traczuk">
+                    </div>
+            
+                    <!-- Texto con efecto neón -->
+                    <div class="flex flex-col items-center text-center">
+                        <h1 class="text-4xl md:text-5xl font-bold text-white neon-text">
+                            Nicolas Traczuk
+                        </h1>
+                        <h2 id="typing-effect" class="text-2xl md:text-3xl text-white font-mono mt-2">
+                            <!-- El texto se llenará con JavaScript -->
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Contenedor separador-->
+        <div class="">
+            <svg viewBox="0 0 100 20" class="w-full">
+                <!-- Definir el filtro de desenfoque -->
+                <defs>
+                    <filter id="blur">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="0" />
+                    </filter>
+        
+                    <!-- Definir el gradiente -->
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#cedcf3;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+        
+                <!-- Aplicar el gradiente y el filtro al trazo -->
+                <path d="M0 5 Q 20 10, 50 5 T 100 5" stroke="url(#gradient)" stroke-width="1" fill="none" filter="url(#blur)" />
+            </svg>
+        </div>
+        <!-- fin separador -->
+
+        <!-- Acerca de mi -->
+        <section>
+            <div class="container mx-auto p-4 border-2 border-white rounded-xl backdrop-blur-md bg-white/10">
+                <h2 class="text-2xl font-bold mb-2 text-white text-center">Acerca de mi</h2>
+
+                <div class="w-10/12 flex text-white mx-auto tracking-wide gap-10 my-5">
+                    <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <p>Apasionado por el desarrollo web. Arranque mi camino en el front y actualmente me desenvuelvo tanto en el frontend como en el backend. Con conocimientos en tecnologías como Vue.js, Tailwind CSS y Bootstrap para construir interfaces de usuario modernas y responsivas. En el backend, cuento con experiencia en PHP, Python y Django, así como en el manejo de bases de datos relacionales.
+                        </p>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <p>
+                            Autodidacta y estudiante, estoy en constante motivacion por crear aplicaciones de mayor volumen. Se que tengo el perfil para marcar la diferencia. Me gusta aprender de mis compañeros/as y me apasiona saber que podemos tener diferentes puntos de vista a la hora de resolver inconvenientes y buscar el indicado.
+                        </p>
+                    </div>
+                </div>
+                <div class="social-buttons" data-aos="flip-up" data-aos-duration="1500" data-aos-easing="ease-in-sine">
+
+                    <a href="https://www.linkedin.com/in/nicol%C3%A1s-traczuk/" target="_blank" class="social-button social-button--linkedin" aria-label="LinkedIn">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="https://github.com/Nico-Traczuk" target="_blank" class="social-button social-button--github" aria-label="GitHub">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.twitter.com/nicotraczuk" target="_blank" class="social-button social-button--twitter" aria-label="CodePen">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            
+              
+        </section>
+        <!-- Fin Acerca de mi -->
+        <!-- Cards -->
+        <section class="my-20">
+            <div class="container mx-auto p-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-aos="fade-up" data-aos-duration="1000">
+                    <!-- Tarjeta 1: HTML5 -->
+                    <div  class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-1">
+                        <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2">HTML5</h4>
+                        <p class=" mb-4">Experiencia: <span class="font-semibold">2 años</span></p>
+                        <p class="">He trabajado en la creación de estructuras semánticas y accesibles para aplicaciones web modernas, optimizadas para SEO y compatibles con todos los navegadores.</p>
+                    </div>
+            
+                    <!-- Tarjeta 2: CSS - Tailwind - Bootstrap -->
+                    <div  class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-2">
+                        <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2">CSS - Tailwind - Bootstrap</h4>
+                        <p class=" mb-4">Experiencia: <span class="font-semibold">2 años</span></p>
+                        <p class="">He utilizado CSS puro, Tailwind CSS y Bootstrap para diseñar interfaces responsivas y atractivas, optimizando el flujo de trabajo con herramientas modernas.</p>
+                    </div>
+            
+                    <!-- Tarjeta 3: JavaScript Vanilla -->
+                    <div  class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-3">
+                        <i class="fab fa-js-square text-4xl text-yellow-500 mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2">JavaScript Vanilla</h4>
+                        <p class=" mb-4">Experiencia: <span class="font-semibold">2 años</span></p>
+                        <p class="">He desarrollado funcionalidades dinámicas y interactivas para aplicaciones web, desde validaciones de formularios hasta manipulación del DOM y consumo de APIs.</p>
+                    </div>
+            
+                    <!-- Tarjeta 4: Vue.js -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-4">
+                        <i class="fab fa-vuejs text-4xl text-green-500 mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2">Vue.js</h4>
+                        <p class=" mb-4">Experiencia: <span class="font-semibold">1 año</span></p>
+                        <p class="">He construido aplicaciones SPA (Single Page Applications) con Vue.js, utilizando Vuex para la gestión del estado y Vue Router para la navegación.</p>
+                    </div>
+            
+                    <!-- Tarjeta 5: Django -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-5" >
+                        <div class="flex gap-4">
+                            <i class="fab fa-python text-4xl text-green-600 mb-4"></i>
+                            <i class="fab fa-laravel text-4xl text-red-600 mb-4"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-2">Django / PHP Laravel</h4>
+                        <p class=" mb-4">Experiencia: <span class="font-semibold">9 meses</span></p>
+                        <p class="">He desarrollado aplicaciones backend robustas y escalables con Django, implementando autenticación, APIs RESTful y conectividad con bases de datos.</p>
+                    </div>
+            
+                    <!-- Tarjeta 6: SQL Server -->
+                    <div  class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-6">
+                        <i class="fas fa-database text-4xl text-purple-500 mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2">SQL Server</h4>
+                        <p class=" mb-4">Experiencia: <span class="font-semibold">6 meses</span></p>
+                        <p class="">He diseñado y gestionado bases de datos relacionales, optimizando consultas y asegurando la integridad de los datos en aplicaciones empresariales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin Cards -->
+
+
+
+        <!-- Contacto -->
+        <section class="min-h-screen flex items-stretch text-white ">
+            <div class="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center" style="background-image: url(https://images.unsplash.com/photo-1577495508048-b635879837f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);">
+                <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
+                <div class="w-full px-24 z-10">
+                    <h1 class="text-5xl font-bold text-left tracking-wide">Estemos en contacto</h1>
+                    <p class="text-3xl my-4">Estoy abierto a nuevas oportunidades y colaboraciones</p>
+                </div>
+
+            </div>
+            <div class="lg:w-1/2 w-full flex items-center justify-center text-center md:px-16 px-0 z-0" style="background-color: #161616;">
+                <div class="absolute lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center" style="background-image: url(https://images.unsplash.com/photo-1577495508048-b635879837f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);">
+                    <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
+                </div>
+                <div class="w-full py-6 z-20">
+
+
+
+                    <form id="form" method="" class="sm:w-2/3 w-full px-4 lg:px-0 mx-auto" >
+                        <div class="pb-2 pt-4">
+                            <input type="text" name="name" id="name" placeholder="Ingrese su nombre" class="block w-full p-4 text-lg rounded-sm bg-black">
+                        </div>
+                        <div class="pb-2 pt-4">
+                            <input type="email" name="email" id="email" placeholder="Ingrese su email" class="block w-full p-4 text-lg rounded-sm bg-black">
+                        </div>
+                        <div class="pb-2 pt-4">
+                            <input type="text" name="asunto" id="asunto" placeholder="Ingrese su asunto" class="block w-full p-4 text-lg rounded-sm bg-black" >
+                        </div>
+                        <div class="pb-2 pt-4">
+                            <textarea name="mensaje" placeholder="Ingrese su mensaje" class="block w-full p-4 text-lg rounded-sm bg-black" id="mensaje"></textarea>
+                        </div>
+
+                        <div class="px-4 pb-2 pt-4">
+                            <button type="submit" class="uppercase block w-full p-4 text-lg rounded-full bg-indigo-500 hover:bg-indigo-600 focus:outline-none">Enviar Mensaje</button>
+                        </div>
+    
+                        <div class="p-4 text-center right-0 left-0 flex justify-center space-x-4 mt-16 lg:hidden ">
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <footer >
+            <div class=" mx-auto py-2 flex items-center justify-center gap-10  ">
+                <p class=" text-white text-sm">© 2025 Nicolas Traczuk. Todos los derechos reservados.</p>
+                <div class="social-buttons">
+
+                    <a href="https://www.linkedin.com/in/nicol%C3%A1s-traczuk/" target="_blank" class="social-button social-button--linkedin " aria-label="LinkedIn" style="width:3rem !important; height: 3rem !important;">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+    
+                    <a href="https://github.com/Nico-Traczuk" target="_blank" class="social-button social-button--github" aria-label="GitHub" style="width:3rem !important; height: 3rem !important;">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.twitter.com/nicotraczuk" target="_blank" class="social-button social-button--twitter" aria-label="CodePen" style="width:3rem !important; height: 3rem !important;">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+        </footer>
+    </body>
+<script src="js/app.js"></script>
+<script src="js/formValidation.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Script para manejar la visibilidad del menú -->
+<script>
+        AOS.init()
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('opacity-0');
+    menu.classList.toggle('translate-y-[-10px]');
+    menu.classList.toggle('opacity-100');
+    menu.classList.toggle('translate-y-0');
+
+});
+</script>
+</html>
