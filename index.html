@@ -39,10 +39,10 @@
             
                 <!-- Menú con transición -->
                 <ul id="menu" class="hidden md:flex justify-center gap-10 text-2xl text-white mt-4 md:mt-0 transition-all duration-300 ease-in-out opacity-0 md:opacity-100 translate-y-[-10px] md:translate-y-0">
-                    <li class="neon-text"><a href="#">Inicio</a></li>
-                    <li class="neon-text"><a href="#">Acerca de mi</a></li>
-                    <li class="neon-text"><a href="#">Portfolio</a></li>
-                    <li class="neon-text"><a href="#">Contacto</a></li>
+                    <li class="neon-text"><a href="#inicio">Inicio</a></li>
+                    <li class="neon-text"><a href="#about-me">Acerca de mi</a></li>
+                    <li class="neon-text"><a href="#cards">Portfolio</a></li>
+                    <li class="neon-text"><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
             
@@ -52,7 +52,7 @@
 
 
         <main>
-            <div class="container mx-auto p-4 mt-20">
+            <div class="container mx-auto p-4 mt-20" id="inicio">
                 <div class="flex flex-col md:flex-row items-center justify-center gap-8 ">
                     <!-- Imagen con backdrop difuminado -->
                     <div class="relative group">
@@ -96,11 +96,11 @@
         <!-- fin separador -->
 
         <!-- Acerca de mi -->
-        <section>
+        <section id="about-me" class="mx-auto">
             <div class="container mx-auto p-4 border-2 border-white rounded-xl backdrop-blur-md bg-white/10">
                 <h2 class="text-2xl font-bold mb-2 text-white text-center">Acerca de mi</h2>
 
-                <div class="w-10/12 flex text-white mx-auto tracking-wide gap-10 my-5">
+                <div class="w-10/12 flex flex-col text-white mx-auto tracking-wide gap-10 my-5 md:flex-row">
                     <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine">
                         <p>Apasionado por el desarrollo web. Arranque mi camino en el front y actualmente me desenvuelvo tanto en el frontend como en el backend. Con conocimientos en tecnologías como Vue.js, Tailwind CSS y Bootstrap para construir interfaces de usuario modernas y responsivas. En el backend, cuento con experiencia en PHP, Python y Django, así como en el manejo de bases de datos relacionales.
                         </p>
@@ -131,7 +131,7 @@
         </section>
         <!-- Fin Acerca de mi -->
         <!-- Cards -->
-        <section class="my-20">
+        <section class="my-20" id="cards">
             <div class="container mx-auto p-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-aos="fade-up" data-aos-duration="1000">
                     <!-- Tarjeta 1: HTML5 -->
@@ -193,23 +193,10 @@
 
         <!-- Contacto -->
          
-        <!-- <section class="min-h-screen flex items-stretch text-white ">
-            <div class="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center" style="background-image: url(https://images.unsplash.com/photo-1577495508048-b635879837f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);">
-                <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
-                <div class="w-full px-24 z-10">
-                    <h1 class="text-5xl font-bold text-left tracking-wide">Estemos en contacto</h1>
-                    <p class="text-3xl my-4">Estoy abierto a nuevas oportunidades y colaboraciones</p>
-                </div>
-
-            </div>
-            <div class="lg:w-1/2 w-full flex items-center justify-center text-center md:px-16 px-0 z-0" style="background-color: #161616;">
-                <div class="absolute lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center" style="background-image: url(https://images.unsplash.com/photo-1577495508048-b635879837f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);">
-                    <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
-                </div>
-                <div class="w-full py-6 z-20">
-
-
-
+        <section class="min-h-screen  text-white container " id="contact">
+            
+            <h3 class="text-center text-2xl">Estemos en contacto</h3>
+            <div class="lg:w-8/12  flex items-center justify-center text-center md:px-16 px-0 z-0 mx-auto" >
                     <form id="form" method="" class="sm:w-2/3 w-full px-4 lg:px-0 mx-auto" >
                         <div class="pb-2 pt-4">
                             <input type="text" name="name" id="name" placeholder="Ingrese su nombre" class="block w-full p-4 text-lg rounded-sm bg-black">
@@ -232,10 +219,9 @@
 
                         </div>
                     </form>
-                </div>
             </div>
         </section>
- -->
+ 
 
         <footer >
             <div class=" mx-auto py-2 flex items-center justify-center gap-10  ">
